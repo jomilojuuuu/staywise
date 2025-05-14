@@ -8,8 +8,8 @@ import { IoMdMenu } from "react-icons/io";
 
 function Navbar() {
     return (
-        <div className='bg-blue-800 text-white font-bold'>
-            <div className='flex justify-between items-center px-4 md:px-4 mt-5'>
+        <div className='bg-[#003b95] text-white font-bold pt-5'>
+            <div className='flex justify-between items-center px-4 md:px-4'>
                 <h1 className='text-xl'>Booking.com</h1>
 
                 {/* display on medium screen upward */}

@@ -3,7 +3,7 @@ import Navigation from "./components/Navigation";
 
 export default function Home() {
   return (
-    <div className="lg:px-[240px] bg-blue-400">
+    <div className="lg:px-[240px] bg-[#003b95]">
       <Navbar />
       <Navigation />
     </div>
