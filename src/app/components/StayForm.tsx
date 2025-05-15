@@ -60,7 +60,7 @@ const StayForm: React.FC = () => {
 
         <div className="flex gap-1 mt-2">
           <div className="bg-white h-14 rounded px-3 py-1">
-            <span className="text-sm block">Check-in Date</span>
+            <span className="text-sm text-black block">Check-in Date</span>
             <input
               ref={checkInRef}
               type="text"
@@ -69,7 +69,7 @@ const StayForm: React.FC = () => {
             />
           </div>
           <div className="bg-white h-14 rounded px-3 py-1">
-            <span className="text-sm block">Check-out Date</span>
+            <span className="text-sm text-black block">Check-out Date</span>
             <input
               ref={checkOutRef}
               type="text"
@@ -78,7 +78,44 @@ const StayForm: React.FC = () => {
             />
           </div>
         </div>
+      <div className="flex mt-2">
+        <div className="bg-white h-14 rounded px-1 py-1">
+          <span className="text-sm block text-black">Adults</span>
+          <input
+            type="text"
+            className="rounded w-full text-md font-semibold text-black pl-1 pt-1"
+            placeholder="2"
+          />
+        </div>
+        <div className="bg-white h-14 rounded px-1 py-1">
+          <span className="text-sm block text-black">Children</span>
+          <input
+            type="text"
+            className="rounded w-full text-md font-semibold text-black pl-1 pt-1"
+            placeholder="1"
+          />
+        </div>
+        <div className="bg-white h-14 rounded px-1 py-1">
+          <span className="text-sm block text-black">Rooms</span>
+          <input
+            type="text"
+            className="rounded w-full text-md font-semibold text-black pl-1 pt-1"
+            placeholder="1"
+          />
+        </div>
+
       </div>
+
+      <button className="bg-blue-500 w-full px-3 h-14 rounded text-white font-semibold mt-2">
+        Search
+      </button>
+      </div>
+
+
+
+
+
+
     </div>
   );
 };
