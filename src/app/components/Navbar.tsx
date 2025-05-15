@@ -4,14 +4,11 @@ import { GoQuestion } from "react-icons/go";
 import { FaRegUserCircle } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 
-
-
 function Navbar() {
     return (
-        <div className='bg-[#003b95] text-white font-bold pt-5'>
+        <div className='text-white font-bold pt-5'>
             <div className='flex justify-between items-center px-4 md:px-4'>
                 <h1 className='text-xl'>Booking.com</h1>
-
                 {/* display on medium screen upward */}
                 <div className='w-[520px] hidden lg:flex gap-2 justify-between items-center'>
                     <h1 className='p-3 hover:bg-[#2551837e] cursor-pointer hover:rounded'>NGN</h1>

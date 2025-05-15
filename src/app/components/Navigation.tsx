@@ -7,15 +7,16 @@ import { LiaCarSolid } from "react-icons/lia";
 import { MdOutlineAttractions } from "react-icons/md";
 import { PiTaxi } from "react-icons/pi";
 import { useState } from "react";
+import Stays from "./Stays";
 
 function Navigation() {
 
-    const [activeCard, setActiveCard] = useState("");
+    const [activeCard, setActiveCard] = useState("stays");
     const renderCardContent = () => {
 
         switch (activeCard) {
             case "stays":
-                return <p>Stays content goes here.</p>;
+                return <Stays />;
             case "flight":
                 return <p>Flight content goes here.</p>;
             case "car-rental":
@@ -28,8 +29,8 @@ function Navigation() {
     }
 
     return (
-        <div className='w-full overflow-x-auto whitespace-nowrap no-scrollbar mt-2'>
-            <div className='flex gap-1'>
+        <div className=' mt-2'>
+            <div className='flex gap-1 w-full overflow-x-auto whitespace-nowrap no-scrollbar'>
                 <button 
                 onClick={() => setActiveCard("stays")} 
                 className={`cursor-pointer flex gap-2 px-3 py-2 items-center text-white hover:bg-[#2551837e] hover:rounded-full ${activeCard === "stays" ? "border border-white bg-[#2551837e] rounded-full" : ""}`}><LiaBedSolid className='text-2xl' /> Stays</button>
@@ -48,7 +49,7 @@ function Navigation() {
             </div>
 
             {/* Content Card Below */}
-            <div className="-6 w-[90%] ">
+            <div className=" bg-gray-100 mt-2">
                 {renderCardContent()}
             </div>
         </div>
