@@ -29,8 +29,8 @@ function Navigation() {
     }
 
     return (
-        <div className=' mt-2'>
-            <div className='flex gap-1 w-full overflow-x-auto whitespace-nowrap no-scrollbar'>
+        <div className=' mt-5'>
+            <div className='px-4 flex gap-1 w-full overflow-x-auto whitespace-nowrap no-scrollbar'>
                 <button 
                 onClick={() => setActiveCard("stays")} 
                 className={`cursor-pointer flex gap-2 px-3 py-2 items-center text-white hover:bg-[#2551837e] hover:rounded-full ${activeCard === "stays" ? "border border-white bg-[#2551837e] rounded-full" : ""}`}><LiaBedSolid className='text-2xl' /> Stays</button>
