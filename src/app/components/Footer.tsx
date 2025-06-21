@@ -23,12 +23,12 @@ const sections: Section[] = [
       "Genius loyalty program",
       "Seasonal and holiday deals",
       "Travel articles",
-      "Booking.com for Business",
+      "STAYWISE for Business",
       "Traveller Review Awards",
       "Car rental",
       "Flight finder",
       "Restaurant reservations",
-      "Booking.com for Travel Agents",
+      "STAYWISE for Travel Agents",
     ],
   },
   {
@@ -48,7 +48,7 @@ const sections: Section[] = [
   {
     title: "About",
     links: [
-      "About Booking.com",
+      "About STAYWISE",
       "How We Work",
       "Sustainability",
       "Press center",
@@ -115,9 +115,9 @@ const Footer: React.FC = () => {
           <span className="font-semibold">NGN</span>
         </div>
         <p className="text-xs text-gray-500 px-4">
-          Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services.
+          STAYWISE is part of Booking Holdings Inc., the world leader in online travel and related services.
         </p>
-        <p className="text-xs text-gray-500 mt-2">© 1996–2025 Booking.com™. All rights reserved.</p>
+        <p className="text-xs text-gray-500 mt-2">© 1996–2025 STAYWISE™. All rights reserved.</p>
       </div>
     </footer>
   );
