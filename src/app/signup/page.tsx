@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebase"; 
+import Link from "next/link";
+
 
 export default function SignupPage() {
   const [form, setForm] = useState({
@@ -32,7 +34,7 @@ export default function SignupPage() {
         form.password
       );
       
-      router.push("/hotels"); // redirect to home or dashboard
+      router.push("/hotels");
     } catch (err: unknown) {
       if (err instanceof Error) {
         setError(err.message);
@@ -51,7 +53,7 @@ export default function SignupPage() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm text-textdark mb-1">
+              <label className="block text-sm  mb-1">
                 First Name
               </label>
               <input
@@ -64,7 +66,7 @@ export default function SignupPage() {
               />
             </div>
             <div>
-              <label className="block text-sm text-textdark mb-1">
+              <label className="block text-sm  mb-1">
                 Last Name
               </label>
               <input
@@ -78,7 +80,7 @@ export default function SignupPage() {
             </div>
           </div>
           <div>
-            <label className="block text-sm text-textdark mb-1">
+            <label className="block text-sm  mb-1">
               Phone Number
             </label>
             <input
@@ -91,7 +93,7 @@ export default function SignupPage() {
             />
           </div>
           <div>
-            <label className="block text-sm text-textdark mb-1">Email</label>
+            <label className="block text-sm  mb-1">Email</label>
             <input
               type="email"
               name="email"
@@ -102,7 +104,7 @@ export default function SignupPage() {
             />
           </div>
           <div>
-            <label className="block text-sm text-textdark mb-1">Password</label>
+            <label className="block text-sm  mb-1">Password</label>
             <input
               type="password"
               name="password"
@@ -117,17 +119,17 @@ export default function SignupPage() {
 
           <button
             type="submit"
-            className="w-full bg-primary text-white py-2 rounded hover:bg-primary-dark transition"
+            className="w-full bg-primary text-blue-300 py-2 rounded hover:bg-primary-dark transition"
           >
             Sign Up
           </button>
         </form>
 
-        <p className="mt-4 text-center text-sm text-textdark">
+        <p className="mt-4 text-center text-sm ">
           Already have an account?{" "}
-          <a href="/login" className="text-primary hover:underline">
+          <Link href="/login" className="text-primary hover:underline">
             Log in
-          </a>
+          </Link>
         </p>
       </div>
     </div>

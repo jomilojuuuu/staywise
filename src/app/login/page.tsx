@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/lib/firebase"; // ✅ Update path if needed
+import { auth } from "@/lib/firebase";
 import Link from "next/link";
 
 export default function LoginPage() {
@@ -18,7 +18,7 @@ export default function LoginPage() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push("/hotels"); // ✅ Redirect after successful login
+      router.push("/hotels");
     } catch {
       setError("Invalid email or password.");
     }
@@ -59,7 +59,7 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            className="w-full bg-primary text-white py-2 rounded hover:bg-primary-dark transition"
+            className="w-full bg-primary text-blue-400 py-2 rounded hover:bg-primary-dark transition"
           >
             Log In
           </button>
