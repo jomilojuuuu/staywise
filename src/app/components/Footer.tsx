@@ -1,126 +1,71 @@
-"use client"
-import React, { useState } from "react";
-import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import React from 'react'
+import Link from 'next/link';
 
-interface Section {
-  title: string;
-  links: string[];
-}
-
-const sections: Section[] = [
-  {
-    title: "Support",
-    links: [
-      "Coronavirus (COVID-19) FAQs",
-      "Manage your trips",
-      "Contact Customer Service",
-      "Safety Resource Center",
-    ],
-  },
-  {
-    title: "Discover",
-    links: [
-      "Genius loyalty program",
-      "Seasonal and holiday deals",
-      "Travel articles",
-      "STAYWISE for Business",
-      "Traveller Review Awards",
-      "Car rental",
-      "Flight finder",
-      "Restaurant reservations",
-      "STAYWISE for Travel Agents",
-    ],
-  },
-  {
-    title: "Terms and settings",
-    links: [
-      "Privacy & cookies",
-      "Terms & conditions",
-      "Partner dispute",
-      "Modern Slavery Statement",
-      "Human Rights Statement",
-    ],
-  },
-  {
-    title: "Partners",
-    links: ["Extranet login", "Partner help", "List your property", "Become an affiliate"],
-  },
-  {
-    title: "About",
-    links: [
-      "About STAYWISE",
-      "How We Work",
-      "Sustainability",
-      "Press center",
-      "Careers",
-      "Investor relations",
-      "Corporate contact",
-    ],
-  },
-];
-
-const Footer: React.FC = () => {
-  const [openSection, setOpenSection] = useState<number | null>(null);
-
-  const toggleSection = (index: number) => {
-    setOpenSection(openSection === index ? null : index);
-  };
-
+function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-700 border-t text-sm">
-      {/* Desktop Grid */}
-      <div className="hidden md:grid grid-cols-5 max-w-7xl mx-auto px-4 py-8 gap-6">
-        {sections.map((section, index) => (
-          <div key={index}>
-            <h3 className="font-semibold mb-2">{section.title}</h3>
-            <ul className="space-y-1">
-              {section.links.map((link, i) => (
-                <li key={i}>
-                  <a href="#" className="hover:underline">{link}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-
-      {/* Mobile Accordion */}
-      <div className="md:hidden px-4 py-4 space-y-4">
-        {sections.map((section, index) => (
-          <div key={index} className="border-b">
-            <button
-              className="w-full flex justify-between items-center py-2 font-semibold"
-              onClick={() => toggleSection(index)}
-            >
-              {section.title}
-              {openSection === index ? <FaChevronUp /> : <FaChevronDown />}
-            </button>
-            {openSection === index && (
-              <ul className="pl-2 pb-2 space-y-1">
-                {section.links.map((link, i) => (
-                  <li key={i}>
-                    <a href="#" className="block text-sm hover:underline">{link}</a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))}
-      </div>
-
-      {/* Currency + Copyright */}
-      <div className="border-t pt-4 pb-6 text-center">
-        <div className="flex justify-center items-center gap-2 mb-2">
-          <img src="https://flagcdn.com/us.svg" alt="USA Flag" className="w-5 h-5" />
-          <span className="font-semibold">NGN</span>
+    <footer className="bg-[#fdfbda] text-[#6a6b4e] py-12 px-6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+        {/* Brand */}
+        <div>
+          <h4 className="text-2xl font-bold mb-2">STAYwise</h4>
+          <p className="text-sm text-[#fdfbda]/80">
+            Your go-to platform for finding and booking hotels effortlessly.
+          </p>
         </div>
-        <p className="text-xs text-gray-500 px-4">
-          STAYWISE is part of Booking Holdings Inc., the world leader in online travel and related services.
-        </p>
-        <p className="text-xs text-gray-500 mt-2">© 1996–2025 STAYWISE™. All rights reserved.</p>
+
+        {/* Navigation */}
+        <div>
+          <h5 className="text-lg font-semibold mb-2">Explore</h5>
+          <ul className="space-y-2">
+            <li>
+              
+              <Link href="/signup" className="hover:text-[#e4a663] transition">
+                Look for a Hotel
+              </Link>
+            </li>
+            <li>
+              <Link href="/login" className="hover:text-[#e4a663] transition">
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link href="/signup" className="hover:text-[#e4a663] transition">
+                Register
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <h5 className="text-lg font-semibold mb-2">Contact</h5>
+          <ul className="space-y-2 text-sm">
+            <li>
+              Email:{" "}
+              <Link
+                href="mailto:support@stayeasy.com"
+                className="hover:text-[#e4a663] transition"
+              >
+                support@staywise.com
+              </Link>
+            </li>
+            <li>
+              Phone:{" "}
+              <span className="text-[#6a6b4e]/90">+234 903 806 413 5</span>
+            </li>
+            <li>
+              Address: <span className="text-[#6a6b4e]/90">Lagos, Nigeria</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom */}
+      <div className="text-center text-xs mt-10 text-[#fdfbda]/60">
+        &copy; {new Date().getFullYear()} StayEasy. All rights reserved.
       </div>
     </footer>
   );
-};
+}
 
-export default Footer;
+export default Footer

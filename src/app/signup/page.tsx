@@ -45,17 +45,20 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center px-4">
+    <div className="min-h-screen bg-background md:flex items-center gap-6 justify-center px-4">
+      <div className="text-5xl pt-40 flex item-center justify-center font-bold text-secondary mb-6 animate-bounce ">
+        <h1 className="text-primary">
+          STAY<span className="">wise</span>
+        </h1>
+      </div>
       <div className="max-w-md w-full bg-white p-8 rounded-lg shadow-md">
         <h1 className="text-2xl font-heading text-secondary mb-6 text-center">
-          Create an Account with staywise
+          Create an Account with <span className="text-primary">STAYwise</span>
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm  mb-1">
-                First Name
-              </label>
+              <label className="block text-sm  mb-1">First Name</label>
               <input
                 type="text"
                 name="firstName"
@@ -66,9 +69,7 @@ export default function SignupPage() {
               />
             </div>
             <div>
-              <label className="block text-sm  mb-1">
-                Last Name
-              </label>
+              <label className="block text-sm  mb-1">Last Name</label>
               <input
                 type="text"
                 name="lastName"
@@ -80,9 +81,7 @@ export default function SignupPage() {
             </div>
           </div>
           <div>
-            <label className="block text-sm  mb-1">
-              Phone Number
-            </label>
+            <label className="block text-sm  mb-1">Phone Number</label>
             <input
               type="tel"
               name="phone"
@@ -119,7 +118,7 @@ export default function SignupPage() {
 
           <button
             type="submit"
-            className="w-full bg-primary text-blue-300 py-2 rounded hover:bg-primary-dark transition"
+            className="w-full bg-primary text-white font-bold py-2 rounded hover:bg-primary-dark cursor-pointer"
           >
             Sign Up
           </button>
